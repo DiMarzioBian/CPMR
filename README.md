@@ -13,7 +13,7 @@ and check the preprocess scripts `/util/preprocess_raw.py` and `/util/process_da
 
 Please check `demo.sh` on how to run the project.
 
-For more information about CoPE (CIKM'22), please check the official [implementation](https://github.com/FDUDSDE/CoPE) 
+For more information about CoPE (CIKM'21), please check the official [implementation](https://github.com/FDUDSDE/CoPE) 
 and my [implementation](https://github.com/DiMarzioBian/CoPE/) as well.
 
 
