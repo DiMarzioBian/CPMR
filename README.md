@@ -2,6 +2,8 @@
 This is the official PyTorch implementation of CPMR from paper 
 *"CPMR: Context-Aware Incremental Sequential Recommendation with Pseudo-Multi-Task Learning"* accepted by CIKM'23 (Oral).
 
+Alias: *"Modeling Context-Aware Temporal Dynamics via Pseudo-Multi-Task Learning"*
+
 Link: [Arxiv](https://arxiv.org/abs/2309.04802), ACM
 
 <img alt="Model" src="figs/CPMR.png" title="Model"/>
