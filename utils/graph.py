@@ -20,31 +20,6 @@ def bi_adj_to_laplacian(mat_b):
     return (diag_mat @ A @ diag_mat + sp.eye(m + n)) / 2
 
 
-def bi_adj_to_laplacian_ctx(mat_b, mat_uu=None, mat_ii=None, mat_ii2=None):
-    """  """
-    m, n = mat_b.shape
-    mat_a = sp.csc_matrix((m, m)) if mat_uu is None else mat_uu
-
-    if (mat_ii is None) and (mat_ii2 is None):
-        mat_c = sp.csc_matrix((n, n))
-    elif (mat_ii is not None) and (mat_ii2 is None):
-        mat_c = mat_ii
-    elif (mat_ii is None) and (mat_ii2 is not None):
-        mat_c = mat_ii2
-    elif (mat_ii is not None) and (mat_ii2 is not None):
-        mat_c = mat_ii + mat_ii2
-    else:
-        mat_c = sp.csc_matrix((n, n))
-
-    A1 = sp.hstack([mat_a, mat_b])
-    A2 = sp.hstack([mat_b.T, mat_c])
-    A = sp.vstack([A1, A2])
-    d = np.array(A.sum(0)).squeeze()
-    sqrt_inv_d = inverse_degree_array(d) ** .5
-    diag_mat = sp.diags(sqrt_inv_d)
-    return (diag_mat @ A @ diag_mat + sp.eye(m + n)) / 2
-
-
 def bi_adj_to_propagation(mat_b):
     """ convert matrix into one direction propagation matrix """
     d_item = np.array(mat_b.sum(0)).squeeze()
