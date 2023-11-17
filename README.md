@@ -4,7 +4,7 @@ This is the official PyTorch implementation of CPMR from paper
 
 Alias: *"Modeling Context-Aware Temporal Dynamics via Pseudo-Multi-Task Learning"*
 
-Link: [Arxiv](https://arxiv.org/abs/2309.04802), ACM
+Link: [Arxiv](https://arxiv.org/abs/2309.04802), [ACM](https://dl.acm.org/doi/10.1145/3583780.3615512).
 
 <img alt="Model" src="figs/CPMR.png" title="Model"/>
 
